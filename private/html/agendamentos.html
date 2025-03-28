@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Salas</title>
+    <link rel="shortcut icon" type="image/x-png" href="../imagens/th.png" />
+    <link rel="stylesheet" href="../css/agendasala.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <div class="hiperlink-programas">
+            <a href="http://10.200.145.160:3000">Pagina Inicial</a>
+        </div>
+        <h1>Agendar Sala</h1>
+    </header><br><br>
+    <main class="main-container">
+        <form id="agendamentoForm">
+            <label for="codigo_unidade">Unidade: </label>
+            <select id="codigo_unidade" name="codigo_unidade"></select><br><br>
+        
+            <label for="id_sala">Sala:</label>
+            <select id="id_sala" name="id_sala"></select><br><br>
+        
+            <label for="id_professor">Professor:</label>
+            <select id="id_professor" name="id_professor"></select><br><br>
+        
+            <label for="data_selecionada">Selecione Datas:</label>
+            <input type="text" id="data_selecionada" name="data_selecionada" placeholder="Selecione as datas" readonly><br><br>
+
+        
+            <label for="hora_inicio">Hora de Início:</label>
+            <input type="time" id="hora_inicio" name="hora_inicio" required><br><br>
+            
+            <label for="hora_fim">Hora de Fim:</label>
+            <input type="time" id="hora_fim" name="hora_fim" required><br><br>
+        
+            <label for="motivo">Motivo:</label>
+            <textarea id="motivo" name="motivo"></textarea><br><br>
+        
+            <button type="submit">Agendar Sala</button>
+        </form>
+        
+    </main>
+    
+    <footer>
+        <p>Desenvolvido pela equipe Lean Senai Gravataí</p>
+        <div id="informacaoSala" class="informacao-sala">
+            <img src="/imagens/Logotipo - FIERGS - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+            <img src="/imagens/Logotipo - IEL - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+            <img src="/imagens/Logotipo - SENAI - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+            <img src="/imagens/Logotipo - SESI - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="../js/luxon.min.js"></script>
+    <script src="../js/agendasala.js"></script>
+</body>
+</html>

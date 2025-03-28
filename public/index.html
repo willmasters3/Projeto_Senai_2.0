@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Sala</title>
+    <link rel="shortcut icon" type="image/x-png" href="../imagens/th.png" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <br><br>
+    <header>
+        <nav>
+            <div id="menuToggle">
+                <img src="/imagens/botao-de-menu.png" alt="Menu" class="menu-icon">
+                <p>MENU</p>
+                <a href="html/login.html" target="_blank">Agendar Salas</a>
+                <a href="html/agendamentos.html" target="_blank">Consultar Agendamentos do Dia</a>
+                <a href="html/agendas-api.html" target="_blank">Ver Todos os Agendamentos (API)</a>
+            </div>
+            <!--Teste-->
+                
+                <!--<a href="http://10.200.145.165/">Pagina Inicial</a> -->
+                <h1 class="nav-title">VISUALIZAR SALAS</h1>
+        </div>
+        </nav>
+    </header>
+    <div class="info-geral">
+        <p>Acesse o MENU <span id="frase-dinamica"></span></p>
+    </div>
+
+    <main class="main-container">
+        <aside class="sidebar" id="sidebar">
+            <h1 class="sidebar-title">Selecione uma Unidade</h1>
+            <select id="unidadeSelect">
+                <option value="">Selecione uma unidade</option>
+            </select>
+            <div id="salasContainer" style="display:none;">
+                <h2 class="sidebar-subtitle">Salas da Unidade</h2>
+                <div id="salasButtons"></div>
+            </div>
+        </aside>
+
+        <section id="salaInfo">
+            <div class="section-container">
+                <h3>Informações da Sala</h3>
+                <p id="salaDetalhes"></p>
+            </div>
+            
+            <div class="section-container">
+                <h3>A sala está agendada para:</h3>
+                <div class="agendamentosList" id="agendamentosList"></div><br>
+            </div>
+            
+                      
+            
+            <div class="section-container">
+                <h3>Programas da Sala</h3>
+                <input type="text" id="programaFilter" placeholder="Pesquisar programas...">
+                <ul id="programasList"></ul>
+            </div>
+            <div id="informacaoSala" class="informacao-sala">
+                <img src="/imagens/Logotipo - FIERGS - Completo.png" alt="Clique no menu" class="imagem-informativa">
+                <img src="/imagens/Logotipo - IEL - Completo.png" alt="Clique no menu" class="imagem-informativa">
+                <img src="/imagens/Logotipo - SENAI - Completo.png" alt="Clique no menu" class="imagem-informativa">
+                <img src="/imagens/Logotipo - SESI - Completo.png" alt="Clique no menu" class="imagem-informativa">
+            </div>
+        </section>       
+        
+    </main>
+    
+
+    <footer>
+        <p>Desenvolvido pela equipe Lean Senai Gravataí</p>
+    </footer>
+   
+<!-- Botão do Chatbot -->
+<div id="chatButton" class="chat-button">
+    <i class="fas fa-comment" id="chatIcon"></i> <!-- Ícone de Chat -->
+</div>
+
+<div id="chatbot" style="display: none;"> <!-- Certifique-se de que a exibição esteja como 'none' inicialmente -->
+    <h3>Mensagens</h3>
+    <div id="chatContainer" style="border: 1px solid #ccc; padding: 10px; height: 200px; overflow-y: auto;"></div>
+    <input type="text" id="userInput" placeholder="Digite sua mensagem..." />
+    <button id="sendMessage">Enviar</button>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/chatbot.js"></script> <!-- Novo script do chatbot -->
+
+</body>
+</html>

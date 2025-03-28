@@ -1,0 +1,169 @@
+/* CSS para o formulário e outros estilos */
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/imagens/Fundo-para-reuniões-Teams---azul---corrigido.png");
+  background-color: #8f8e8e;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+header h1 {
+  color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Estilos para o link "Adicionar Programas" */
+header a {
+  text-decoration: none; 
+  color: #f1eded; 
+  font-weight: bold;
+  margin-right: 20px;
+  display: flex; 
+  align-items: flex-start;
+  padding: 5px;
+}
+/* Estilos para a div contendo os links */
+.hiperlink-programas {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-around; /* Verificar quando puder. no celular*/
+  }
+  /* Cabeçalho */
+/* Estilos para o formulário */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px; /* Adicionei espaço na parte inferior para o footer */
+  }
+  
+  
+  /* Estilos para os rótulos */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: auto;
+  }
+  select {
+    display:block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+
+}
+.codigo_unidade{
+  padding-bottom: 50px;
+}
+
+  /* Estilos para os campos de entrada */
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para o botão de envio */
+  button[type="submit"] {
+    background-color: #0948f7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+   /* Estilos para o botão de envio */
+   button[type="excluirProgramas"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Estilos para o botão de envio ao passar o mouse */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    
+  }
+  .informacao-prof{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none !important;
+    color: rgb(245, 165, 202);
+  }
+  .professoresTabela th{
+    color: #ccc;
+    text-align: center;
+  }
+  .professoresTabela tbody{
+    text-align: center;
+  }
+  .professoresTabela{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(160, 196, 250);
+    text-align: left;
+    
+  }
+  .professoresTabela td{
+   padding: 5px;
+  }
+ 
+  .professoresTabela button{
+    background-color: #0948f7;
+    margin-left: 10px;
+    border: none;
+    text-shadow: none;
+    color: #fcfcfc;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  footer {
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    margin-left: -13px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

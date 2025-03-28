@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white; /* Fundo branco */
+
+}
+
+main {
+    padding: 20px;
+}
+.agendamento-hoje p{
+    color: blue; /* Define a cor do texto como azul */
+}
+
+.agendamento-hoje p span{
+    color: rgb(252, 10, 10); /* Define a cor do texto como azul */
+}
+.agendamentos-grid .agendamento-item.agendamento-hoje {
+    color: blue; /* Aumenta a especificidade */
+}
+
+
+.agendamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas na grid */
+    gap: 20px; /* Espaço entre os itens */
+    margin-top: 100px;
+}
+
+.agendamento-item {
+    border: 1px solid #ccc; /* Borda dos itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo dos itens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+h3 {
+    font-size: 1.5em; /* Tamanho da fonte para o título */
+    font-weight: 700; /* Fonte em negrito */
+    color: #333; /* Cor do texto */
+    margin: 0; /* Remove as margens */
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    font-weight: 500; /* Fonte semi-negrito */
+    color: #333; /* Cor do texto */
+    margin: 5px 0; /* Margem superior e inferior */
+}
+
+

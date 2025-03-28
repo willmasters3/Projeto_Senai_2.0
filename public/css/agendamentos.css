@@ -1,0 +1,186 @@
+/* CSS para o formulário e outros estilos */
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Sansita Swashed', Arial, sans-serif; /* Fonte estilizada */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/imagens/Fundo-para-reuniões-Teams---azul---corrigido.png");
+  background-color: #8f8e8e;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+main {
+    padding: 20px;
+}
+.hidde {
+    display: none; /* Oculta o elemento */
+}
+
+.agendamento-hoje p{
+    color: blue; /* Define a cor do texto como azul */
+}
+
+.agendamento-hoje p span{
+    color: rgb(252, 10, 10); /* Define a cor do texto como azul */
+}
+.agendamentos-grid .agendamento-item.agendamento-hoje {
+    color: blue; /* Aumenta a especificidade */
+}
+
+
+.agendamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas na grid */
+    gap: 20px; /* Espaço entre os itens */
+    margin-top: 100px;
+}
+.agendamento-item:hover {                    /*Alterado as 12:48 07/11/24 */
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.agendamento-item {                               
+    border: 1px solid #ccc; /* Borda dos itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Aumenta o espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo dos itens */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave */
+}
+
+h3 {
+    font-size: 1.6em; /* Ajusta o tamanho da fonte para o título */
+    font-weight: 700; /* Fonte em negrito */
+    color: #1a1a1a; /* Cor do texto mais escura */
+    margin: 0 0 10px 0; /* Remove margens superiores, adiciona margem inferior */
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em; /* Ajustando o tamanho do texto */
+    font-weight: 400; /* Fonte normal */
+    color: #333; /* Cor do texto */
+    margin: 5px 0; /* Margem superior e inferior */
+    line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade */
+}
+label{
+    color: white;
+}
+.imagem-informativa {
+    max-width: 20%;
+    height: 50.02px;
+  }
+/**/
+/* Estilo para o container principal */
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: auto; /* Centraliza o container */
+    padding: 20px; /* Espaçamento interno do container */
+}
+
+/* Estilo do título */
+h2 {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Espaço acima do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 2em; /* Tamanho da fonte */
+    color: #007BFF; /* Cor do texto */
+    border-bottom: 2px solid #007BFF; /* Borda abaixo */
+    padding-bottom: 10px; /* Espaçamento interno abaixo */
+}
+
+/* Estilo da tabela */
+.table {
+    width: 100%; /* Preenche toda a largura do contêiner */
+    border-collapse: collapse; /* Remove espaços entre as células */
+    border-radius: 8px; /* Bordas arredondadas na tabela */
+    overflow: hidden; /* Esconde bordas arredondadas */
+    margin-top: 20px; /* Espaço acima da tabela */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave abaixo da tabela */
+}
+
+/* Estilo do cabeçalho da tabela */
+.table thead {
+    background-color: #0056b3; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+}
+
+/* Estilo das células do cabeçalho */
+.table thead th {
+    padding: 12px; /* Espaçamento interno das células do cabeçalho */
+    font-weight: bold; /* Negrito */
+    font-size: 1.1em; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do corpo da tabela */
+.table tbody {
+    background-color: #fff; /* Cor de fundo das linhas */
+}
+
+/* Estilo das células da tabela */
+.table tbody td {
+    padding: 12px; /* Espaçamento interno das células */
+    border-bottom: 1px solid #ddd; /* Borda inferior das células */
+    text-align: center; /* Centraliza texto nas células */
+}
+
+/* Efeito de hover nas linhas da tabela */
+.table tbody tr:hover {
+    background-color: #e7f1ff; /* Cor de fundo ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Mensagem quando não há agendamentos */
+.text-center {
+    font-size: 1.2em; /* Tamanho da fonte */
+    color: #fafafa; /* Cor mais suave */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px; /* Espaço acima do footer */
+}
+  
+/* Rodapé */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px; /* Espaço acima do footer */
+}
+@media (max-width: 600px){
+.agendamentos-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-top: 100px;
+}
+select{
+    padding: 5px;
+}
+main{
+    padding-left: 5px;
+}
+}
+@media (max-width: 900px){
+    .agendamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            margin-top: 100px;
+    }
+    }

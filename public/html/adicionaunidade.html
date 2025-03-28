@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Unidades</title>
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/th.png" />
+    <link rel="stylesheet" type="text/css" href="../css/adicionaunidade.css" media="screen">
+
+</head>
+
+<body>
+    <header>
+        <div class="hiperlink-programas">
+            <a href="../">Pagina Inicial</a>
+            <a href="/html/alteradados.html">Altera dados da Sala</a>
+            <a href="/html/agendasala.html">Criar Agendamentos</a>
+            <a href="/html/alteraagenda.html">Consultar Agendamentos</a> 
+            <a href="/html/cadastro.html">Cadastrar Professores</a>
+            <a href="/html/adicionaprogramas.html">Gerenciar Programas</a>
+            <a href="/html/unidadescurriculares.html">Unidade Curricular</a>
+        </div>
+        <h1>CRIAR UNIDADES E SALAS</h1>
+        
+    </header>
+    <main>
+        <section>
+            <div class="form-container">
+                <!-- Formulário para criar unidade e salas -->
+                <form id="form-criar-unidade">
+                    <fieldset>
+                        <p>Formulário para criar unidade</p>
+                        <label for="nomeUnidade">Nome da Unidade:</label>
+                        <input type="text" id="nomeUnidade" required>
+
+                        <label for="codigoUnidade">Código da Unidade: "UO000"</label>
+                        <input type="text" id="codigoUnidade" required>
+
+                        <div id="salas">
+                            <!-- Campos dinâmicos para salas serão adicionados aqui -->
+                        </div>
+                        <!-- <button id="buttonClick" type="button" onclick="adicionarSala()"
+                           </button> class="adicionar-sala-button">Adicionar Sala</button>-->
+                        <button type="submit">Criar Unidade</button>
+                    </fieldset>
+                </form>
+                <!-- Formulário para renomear unidade -->
+                <form id="form-renomear-unidade">
+                    <fieldset>
+                        <p>Formulário para renomear unidade</p>
+                        <label for="codigoUnidadeRenomear">Nome da Unidade:</label>
+                        <select id="codigoUnidadeRenomear"></select>
+
+                        <label for="novoNomeUnidade">Novo Nome da Unidade:</label>
+                        <input type="text" id="novoNomeUnidade" required>
+                        <button type="submit">Renomear Unidade</button>
+                    </fieldset>
+                </form>
+
+                <form>
+                    <h1>Adicionar Salas em Unidade Existente</h1>
+                    <label for="unidadeSelect">Selecione uma Unidade:</label>
+                    <select id="unidadeSelect" onchange="carregarSalas()">
+                        <option value="">-- Selecione --</option>
+                    </select>
+                
+                    <h2>Salas:</h2>
+                    <div id="salasContainer"></div>
+                
+                    <h2>Adicionar Nova Sala:</h2>
+                    <input type="text" id="novaSalaInput" placeholder="Nome da nova sala" />
+                    <button id="adicionarSalaBtn" onclick="adicionarSala()">Adicionar Sala</button>
+                
+                </form>
+                <!-- Formulário para adicionar salas 
+                <form id="form-adicionar-salas">
+                    <fieldset>
+                        <p>Formulário para adicionar salas</p>
+                        <label for="unidadeAdicionarSala">Selecione a Unidade:</label>
+                        <select id="unidadeAdicionarSala" required></select>
+
+                        <label for="novaSala">Digite a nova sala</label>
+                        <input type="text" id="novaSala" required>
+                
+                        <div id="salasAdicionar">
+                             Campos dinâmicos para adicionar salas serão adicionados aqui
+                        </div><br><br>
+                        <button type="button" onclick="adicionarSalaAdicionar()">Adicionar Sala</button>
+                        <button type="submit">Criar nova Salas</button>
+                    </fieldset>
+                </form> -->
+
+                <!-- Formulário para remover unidade -->
+                <form id="form-remover-unidade">
+                    <fieldset>
+                        <p>Formulário para remover unidade</p>
+                        <label for="codigoUnidadeRemover">Nome da Unidade:</label>
+                        <select id="codigoUnidadeRemover"></select>
+                        <h3>ATENÇÃO! Antes de excluir, é necessário desassociar o programa da sala, pois pode ocorrer um
+                            erro!</h3>
+                        <button type="submit">Remover Unidade</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <!-- Div para exibir unidades e salas -->
+        <div id="unidades-salas" ></div>
+        <!-- Formulário para adicionar salas a unidades existentes -->
+
+    </main>
+    <footer>
+        <p>Desenvolvido pela equipe Lean Senai Gravataí </p>
+    </footer>
+    <script src="../js/adcionaunidade.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" type="image/x-png" href="../imagens/th.png" />
+    <link rel="stylesheet" href="../css/dashboard.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcome-message"></h1>
+        <div class="card-container">
+            <div class="card" onclick="window.location.href='agendasala.html'">
+                <h2>Agendar Salas</h2>
+            </div> 
+            
+            <div class="card" onclick="window.location.href='alteraagenda.html'">
+                <h2>Gerenciar Agenda</h2>
+            </div>
+            <div class="card" onclick="window.location.href='cadastro.html'">
+                <h2>Cadastro de Usuários</h2>
+            </div>                      
+            <div class="card" onclick="window.location.href='alteradados.html'">
+                <h2>Gerenciar Salas</h2>
+            </div>            
+            <div class="card" onclick="window.location.href='unidadescurriculares.html'">
+                <h2>Unidades Curriculares</h2>
+            </div>
+        </div>
+    </div>
+    <script src="../js/dashboard-coordenador.js"></script> <!-- Link para o JS -->
+</body>
+</html>

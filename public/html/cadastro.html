@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Professor</title>
+    <link rel="shortcut icon" type="image/x-png" href="../imagens/th.png" />
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+<body>
+    <header>
+        <div class="hiperlink-programas">
+            <a href="../">Pagina Inicial</a>
+            <a href="/html/alteradados.html">Altera dados da Sala</a>
+            <a href="/html/alteraagenda.html">Consultar Agendamento</a>
+            
+            <a href="/html/agendasala.html">Criar Agendamentos</a>
+            <a href="/html/adicionaprogramas.html">Gerenciar Programas</a>
+            <a href="/html/adicionaunidade.html">Gerenciar Unidades</a>  
+            <a href="/html/unidadescurriculares.html">Unidade Curricular</a>         
+        </div><br><br>
+        <h1>Adicionar Funcionário/Professor no sistema</h1>
+    </header>
+    <main class="main-container">
+        <form id="professorForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required><br><br>
+
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" placeholder="Usuário (nome.sobrenome)" required><br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            
+            <label for="permissao">Permissão:</label>
+            <select id="permissao" name="permissao" required>
+                <option value="user">Usuário</option>
+                <option value="admin">Administrador</option>
+                <option value="coordenador">Coordenador</option> <!-- Nova opção -->
+            </select>
+
+
+
+            <label for="codigo_unidade">Unidades:</label>
+            <select id="codigo_unidade" class="codigo_unidade" name="codigo_unidade" multiple required>
+            <!-- As opções de unidades serão preenchidas aqui -->
+            </select><br><br>
+
+
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <!-- Tabela para listar professores 
+        <div id="professoresContainer" style="display:none;">
+            <label for="codigo_unidade">Unidade:</label>
+            <select id="codigo_unidade" required>
+                <option value="" disabled selected>Selecione a unidade</option>-->
+                <!-- As unidades serão preenchidas aqui 
+            </select>
+            <button type="button" id="listarProfessores">Listar Professores</button>-->
+            <div class="informacao-prof" >
+            <p style="color:rgb(56, 245, 9)">ATENÇÃO!</p>
+            <p style="color: rgb(56, 245, 9)">A desassociação remove o professor apenas da unidade, enquanto a exclusão remove-o permanentemente do banco de dados. CUIDADO!</p>
+            <p style="color: rgb(56, 245, 9)">Sempre utilize a opção de desassociar para remover um professor da unidade.</p>
+            <p style="color: rgb(56, 245, 9)">Se o professor tiver alguma sala agendada em seu nome, não será possível excluí-lo.</p>
+
+            <BR><BR><BR>
+            </div>
+            <div class="professoresTabela">
+            <table id="professoresTabela">
+                <thead>
+                    <tr>
+                        
+                        <th>Nome</th>
+                        <th>Login</th>
+                        <th>Matrícula</th>
+                        <th>Ações</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <!-- Os dados dos professores serão adicionados aqui -->
+                </tbody>
+            </table>
+        </div><BR><BR><BR><BR><BR><BR>
+            
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido pela equipe Lean Senai Gravataí</p>
+    </footer>
+    <script src="/js/cadastro_professor.js"></script>
+</body>
+</html>

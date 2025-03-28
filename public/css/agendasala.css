@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+
+/* Estilos para o formulário */
+/* Estilos gerais */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50px;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+
+}
+
+body.sala-info-visible::before {
+  opacity: 0.2;
+}
+
+body {
+  background-image: url("/imagens/Fundo-para-reuniões-Teams---azul---corrigido.png");
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;  
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.8);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+header h1 {
+color: #f9f9f9;
+text-align: center;
+margin-bottom: 20px;
+font-family: 'Arial', sans-serif;
+text-transform: uppercase;
+}
+
+/* Estilos para o link "Adicionar Programas" */
+header a {
+text-decoration: none; 
+color: #f1eded; 
+font-weight: bold;
+margin-right: 20px;
+display: flex; 
+align-items: flex-start;
+padding: 5px;
+}
+.hiperlink-programas {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items: center; /* Alinha verticalmente ao centro */
+  
+}
+.main-container {
+  flex: 1; 
+  padding: 20px; 
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  flex-direction: column;
+  align-items: center; /* Alinha o conteúdo começando de cima */
+}
+
+.form-container {
+  display: flex; /* Aplica flexbox */
+  align-items: flex-start; /* Alinha os itens na parte superior */
+  gap: 20px; /* Espaçamento entre o resultado e o formulário */
+}
+
+.resultadoVerificacao {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+  border-radius: 10px; 
+  padding: 20px;
+  width: 600px; /* Largura fixa para a área de resultados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+  max-height: 400px; /* Define uma altura máxima para evitar que fique muito grande */
+}
+.resultadoVerificacao h3 {
+  font-weight: bold; /* Destaca o cabeçalho */
+  margin-bottom: 10px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.resultadoVerificacao ul {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding-left: 0; /* Remove o padding da esquerda */
+}
+
+.resultadoVerificacao li {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding: 10px; /* Espaçamento interno nas listas */
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  border-radius: 5px; /* Arredonda os cantos da borda */
+  margin-bottom: 10px; /* Espacamento entre os itens */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.resultadoVerificacao li:hover {
+  background-color: rgba(54, 73, 244, 0.1); /* Cor de fundo ao passar o mouse */
+}
+
+.resultadoVerificacao li span {
+  font-weight: bold; /* Destaca partes específicas dos itens */
+  color: #007BFF; /* Cor azul para as datas */
+}
+
+.resultadoVerificacao li .datas {
+  display: block; /* Faz as datas ficarem em uma nova linha */
+  margin-top: 5px; /* Espaçamento acima das datas */
+  color: #555; /* Cor das datas para diferenciação */
+  font-style: italic; /* Itálico para as datas */
+}
+/*====================== Sala disponiveis Abaixo=======================================*/
+.resultadoSalasDisponiveis {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px; /* Largura fixa para a área de resultados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+  max-height: 400px; /* Altura máxima para evitar que fique muito grande */
+  margin-bottom: 20px; /* Espaçamento na parte inferior */
+}
+
+.resultadoSalasDisponiveis h3 {
+  font-weight: bold; /* Destaca o cabeçalho */
+  margin-bottom: 10px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.resultadoSalasDisponiveis ul {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding-left: 0; /* Remove o padding da esquerda */
+}
+
+.resultadoSalasDisponiveis li {
+  cursor: pointer;
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding: 10px; /* Espaçamento interno nas listas */
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  border-radius: 5px; /* Arredonda os cantos da borda */
+  margin-bottom: 10px; /* Espacamento entre os itens */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.resultadoSalasDisponiveis li:hover {
+  background-color: rgba(54, 73, 244, 0.1); /* Cor de fundo ao passar o mouse */
+}
+
+.resultadoSalasDisponiveis li span {
+  font-weight: bold; /* Destaca partes específicas dos itens */
+  color: #007BFF; /* Cor azul para as datas */
+}
+
+.resultadoSalasDisponiveis li .datas {
+  display: block; /* Faz as datas ficarem em uma nova linha */
+  margin-top: 5px; /* Espaçamento acima das datas */
+  color: #555; /* Cor das datas para diferenciação */
+  font-style: italic; /* Itálico para as datas */
+}
+
+/*=================Sala Disponiveis Acima ==========================================*/
+
+.resultadoVerificacao p {
+  font-weight: bold; /* Destaca o cabeçalho */
+  margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
+}
+
+.resultadoVerificacao ul {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding-left: 0; /* Remove o padding da esquerda */
+  
+}
+
+.resultadoVerificacao li {
+  padding: 5px; /* Espaçamento interno nas listas */
+  border-bottom: 1px solid #ccc; /* Adiciona uma linha abaixo de cada item */
+}
+
+.resultadoVerificacao li:last-child {
+  border-bottom: none; /* Remove a linha do último item */
+}
+
+.resultadoVerificacao li span {
+  font-weight: bold; /* Destaca partes específicas dos itens */
+}
+
+
+.agendamentoForm {
+    background-color: rgba(75, 162, 213, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px; /* Largura máxima do formulário */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+.agendamentoForm label {
+    margin: 10px 0 5px;
+    color: #000;
+}
+
+.agendamentoForm select, 
+.agendamentoForm input, 
+.agendamentoForm textarea {
+   /* width: 100%;  Largura total */
+    border-radius: 5px;
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda suave */
+}
+
+.agendamentoForm textarea {
+    height: 70px; /* Altura ajustada para o textarea */
+}
+
+.agendamentoForm button {
+    padding: 10px;
+    background-color: rgba(54, 73, 244, 0.7); /* Fundo azul com leve transparência */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Espaçamento acima do botão */
+    transition: background-color 0.3s;
+}
+
+.agendamentoForm button:hover {
+    background-color: rgba(54, 73, 244, 0.9); /* Escurece quando passa o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos existentes para agendamentos (pode ser mantido se necessário) */
+.agendamentosExistentes {
+  display: grid; /* Você pode remover isso se estiver usando Bootstrap table */
+  /*grid-template-columns: repeat(4, 1fr);*/
+  gap: 20px;
+}
+
+/* Estilos que irão para a tabela, caso você decida removê-lo */
+.resultadoVerificacao {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 400px;
+}
+/* Novos estilos sugeridos para Bootstrap */
+.table {
+  border-radius: 10px; /* Para tabelas */
+  background-color: white;
+}
+.table th {
+  background-color: rgba(54, 73, 244, 0.8);
+  color: white;
+}
+.btn-danger {
+  background-color: #d9534f; /* Cor de fundo do botão de exclusão */
+}
+.agendamento-checkbox{
+  display: inline-block;
+            width: 25px; /* Largura personalizada */
+            height: 25px; /* Altura personalizada */
+            border: 2px solid #007BFF; /* Cor da borda */
+            border-radius: 5px; /* Cantos arredondados */
+            position: relative;
+            cursor: pointer; /* Muda o cursor ao passar */
+}
+
+input[type="checkbox"]:checked + .checkbox-custom{
+  background-color: #000;
+}
+.agendamentosExistentes > div { /* Aplica estilo a cada agendamento-item dentro do contêiner */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 20px; /* Espaço interno */
+  background-color: #f9f9f9; /* Cor de fundo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.2s, box-shadow 0.2s; /* Efeito de transição */
+}
+.agendamentosExistentes button{
+  cursor: pointer;
+}
+
+/* Adicionando um efeito de hover opcional */
+.agendamentosExistentes > div:hover {
+  transform: translateY(-5px); /* Eleva o item ao passar o mouse */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+#filtros {
+  margin-bottom: 20px;
+}
+
+#filtros label {
+  margin-right: 10px;
+  color: white;
+}
+#aplicarFiltros{
+  cursor: pointer;
+}
+#botaoProximo{
+  cursor: pointer; 
+}
+#botaoAnterior{
+  cursor: pointer; 
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+.informacao-sala {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagem-informativa {
+    max-width: 20%;
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+.paginacao button{
+  margin: 6px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+@media (max-width: 768px) {
+    .agendamentoForm {
+        width: 90%; /* Para telas menores */
+    }
+    .agendamentosExistentes {
+      grid-template-columns: 1fr; /* Altera para 1 coluna em telas pequenas */
+  }
+  #filtros {
+    flex-direction: row; /* Muda para linha em telas maiores */
+    flex-wrap: wrap;      /* Permite que os itens quebrem em múltiplas linhas se necessário */
+}
+
+#filtros label, #filtros input, #filtros button {
+    flex: 1 1 calc(50% - 10px); /* Itens ocuparão 50% da largura disponível (menos espaço) */
+    margin-right: 10px; /* Espaçamento à direita */
+}
+
+#filtros button {
+    flex: 1 1 100%; /* O botão ocupa 100% em telas maiores */
+}
+}
+/* Média query para telas menores */
+@media (max-width: 600px) {
+  .resultadoVerificacao {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    border-radius: 10px; 
+    padding: 20px;
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+    max-height: 400px; /* Define uma altura máxima para evitar que fique muito grande */
+  }
+  .agendamentosExistentes {
+      grid-template-columns: 1fr; /* Altera para 1 coluna em telas pequenas */
+  }
+  #filtros {
+    display: flex;           /* Usar flexbox para disposição */
+    flex-direction: column;  /* Empilhar os itens verticalmente */
+    gap: 10px;              /* Espaço entre os itens */
+    padding: 15px;          /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    border: 1px solid #ddd; /* Borda leve ao redor */
+    border-radius: 5px;     /* Bordas arredondadas */
+}
+
+#filtros label {
+    font-weight: bold; /* Deixar os rótulos em negrito */
+}
+
+#filtros input[type="text"],
+#filtros input[type="time"],
+#filtros button {
+          /* Fazer os inputs e botão ocupar 100% da largura */
+    padding: 10px;     /* Espaçamento interno dos inputs e botão */
+    border: 1px solid #ccc; /* Borda leve para os inputs */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+#filtros button {
+    background-color: rgba(54, 73, 244, 0.7); /* Cor de fundo do botão */
+    color: white;     /* Cor do texto do botão */
+    cursor: pointer;  /* Mãozinha ao passar sobre o botão */
+    transition: background-color 0.3s; /* Animação de cor ao passar o mouse */
+}
+
+#filtros button:hover {
+    background-color: rgba(54, 73, 244, 0.9); /* Cor mais escura ao passar o mouse no botão */
+}
+
+.resultadoVerificacao {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+  border-radius: 10px; 
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+  max-height: 400px; /* Define uma altura máxima para evitar que fique muito grande */
+}
+.resultadoSalasDisponiveis {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%; /* Largura fixa para a área de resultados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+  max-height: 400px; /* Altura máxima para evitar que fique muito grande */
+  margin-bottom: 20px; /* Espaçamento na parte inferior */
+}
+}

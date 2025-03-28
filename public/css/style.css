@@ -1,0 +1,405 @@
+﻿/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/imagens/Fundo-para-reuniões-Teams---azul---corrigido.png");
+  margin: 0;
+  padding: 0;
+  background-color: #8f8e8e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+
+header {
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+}
+
+header h1 {
+  color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  
+}
+/* Estilos para o link "Adicionar Programas" */
+header a {
+  text-decoration: none; 
+  color: #f1eded; 
+  font-weight: bold; 
+  margin-right: 20px; 
+  display: flex; 
+  align-items:flex-start;
+  padding: 5px;
+}
+.info-geral{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+#frase-dinamica {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Defina uma cor visível, como preto */
+  
+}
+
+.show{
+  opacity: 1;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container a {
+  text-align: left;
+}
+
+#menuToggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+}
+#menuToggle a {
+  margin-left: 100px;
+}
+#menuToggle img.menu-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 24px;
+  
+}
+
+/* Containers Gerais */
+.main-container {
+  display: flex;
+  flex: 1;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: rgba(204, 202, 202, 0.9);
+  color: #333333;
+  padding: 20px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: -320px;
+  height: calc(107% - 60px);
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-title, .sidebar-subtitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.informacao-sala {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.imagem-informativa {
+  max-width: 20%;
+  height: 50.02px;
+}
+
+#unidadeSelect {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo escolar para as informações da sala */
+#salaInfo {
+  flex: 0.7;
+  margin-left: 320px; /* Ajuste para não sobrepor a sidebar */
+  padding: 30px;
+  background-color: rgba(204, 202, 202, 0.8);
+  color: #0c0b0b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: none;
+  font-family: 'Arial', sans-serif;
+}
+
+#salaInfo h3 {
+  border-bottom: 2px solid #03203f;
+  color: #03203f;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+#salaInfo p {
+  line-height: 1.6;
+}
+
+#salaInfo strong {
+  font-weight: bold;
+  color: #03203f;
+}
+
+/* Sala Detalhes */
+#salaDetalhes img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Imagem expansível */
+.clickable-image.expanded {
+  max-width: 600px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Listagem de Programas */
+#programasList {
+  overflow: hidden;
+  position: relative;
+}
+
+#programasList li {
+  list-style-type: none;
+  line-height: 1.5;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+#programasList li:hover {
+  transform: scale(1.05);
+}
+
+/* Formulários e Botões */
+select, button, input[type="text"] {
+  padding: 10px;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Botões Salas */
+#salasButtons button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#salasButtons button:hover {
+  background-color: #0056b3;
+}
+
+#salasButtons button:active {
+  opacity: 0.8;
+}
+#salaInfo .section-container {
+  margin-bottom: 30px;
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilos do Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 80px; /* Aumente o valor para empurrar para cima */
+  right: 20px; /* Distância do lado direito */
+  width: 350px; /* Largura do chatbot */
+  background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semitransparente */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Sombra em volta */
+  display: none; /* Inicialmente oculto */
+  flex-direction: column; /* Elementos em coluna */
+  z-index: 1000; /* Para ficar acima de outros elementos */
+  overflow: hidden; /* Impede a barra de rolagem */
+  transition: all 0.3s ease; /* Animação suave nas mudanças */
+}
+
+
+#chatbot h3{
+  text-align: center;
+}
+
+/* Contêiner de Mensagens do Chatbot */
+#chatContainer {
+  flex: 1; /* Para ocupar a altura disponível */
+  overflow-y: auto; /* Rolar se ultrapassar a altura */
+  padding: 10px; /* Espaçamento interno */
+  background-color: #f9f9f9; /* Cor de fundo mais clara para o chat */
+}
+
+/* Mensagens do Chatbot */
+.chatbot-message, .user-message {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px; /* Cantos arredondados nas mensagens */
+  max-width: 80%; /* Limitar a largura das mensagens */
+}
+
+/* Estilo para mensagens do chatbot */
+.chatbot-message {
+  background-color: #e0f7fa; /* Cor de fundo azul claro */
+  color: #00796b; /* Texto escuro */
+  align-self: flex-start; /* Para empurrar para o lado esquerdo */
+}
+
+/* Estilo para mensagens do usuário */
+.user-message {
+  background-color: #007BFF; /* Cor de fundo azul */
+  color: #fff; /* Texto branco */
+  align-self: flex-end; /* Para empurrar para o lado direito */
+}
+
+/* Input do usuário */
+#userInput {
+  width: calc(100% - 20px); /* Ajusta para ocupar a largura necessária */
+  margin: 10px; /* Margem interna */
+  padding: 10px; /* Espaçamento */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botão de Envio */
+#sendMessage {
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px 10px 10px; /* Margem na parte inferior e lateral */
+}
+
+#sendMessage:hover {
+  background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Bolinha do Chat */
+.chat-button {
+  position: fixed;
+  bottom: 20px; /* Distância do fundo */
+  right: 20px; /* Distância do lado direito */
+  width: 50px; /* Largura da bolinha */
+  height: 50px; /* Altura da bolinha */
+  background-color: #007BFF; /* Cor do fundo */
+  border-radius: 50%; /* Fazer de forma circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra em volta */
+  z-index: 1001; /* Um nível acima do chatbot */
+}
+
+
+
+#chatContainer {
+  flex: 1; /* Para ocupar a altura disponível */
+  overflow-y: auto; /* Rolar se ultrapassar a altura */
+}
+
+/* Ícone do Chat */
+#chatButton i {
+  color: white; /* Cor do ícone */
+  font-size: 28px; /* Tamanho do ícone */
+}
+
+
+/* Ícone do Chat */
+#chatButton img {
+  width: 28px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: 28px; /* Ajuste o tamanho do ícone conforme necessário */
+  filter: brightness(0) invert(1); /* Deixar ícone branco se necessário */
+}
+
+
+button {
+  background-color: #007BFF; /* Cor do botão */
+  color: #fff; /* Texto do botão */
+  border: none;
+  cursor: pointer;
+  border-radius: 0 0 10px 10px; /* Cantos arredondados no botão */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .sidebar {
+    left: -340px; /* Ajuste para sidebar menor */
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  #salaInfo {
+    margin-left: 0; /* Remover margem ao lado da sidebar */
+  }
+}
+
+@media (max-width: 600px) {
+  #salaInfo {
+    font-size: 14px;
+  }
+}

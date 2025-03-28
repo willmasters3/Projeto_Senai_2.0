@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar Dados da Sala</title>
+  <link rel="shortcut icon" type="imagex/png" href="../imagens/th.png" />
+  <link rel="stylesheet" href="../css/alteradados.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Adicione seus estilos CSS aqui */
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="hiperlink-programas">
+      <a href="../">Pagina Inicial</a>
+      <a href="/html/alteraagenda.html">Gerenciar Agendamento</a>
+      <a href="/html/agendasala.html">Criar Agendamentos</a>
+      <a href="/html/cadastro.html">Cadastrar Professores</a>
+      <a href="/html/adicionaprogramas.html">Gerenciar Programas</a>
+      <a href="/html/adicionaunidade.html">Gerenciar Unidades</a>
+      <a href="/html/unidadescurriculares.html">Unidade Curricular</a>
+   </div>
+    <h1>Alterar Dados da Sala</h1>
+  </header>
+<main>
+  <form id="form-alterar-sala"  enctype="multipart/form-data">
+    <label for="salas">Selecione uma sala:</label>
+    <select id="salas">
+      <option value="" disabled selected>Selecione uma sala</option>
+      <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
+    </select>
+   <!--
+    <label for="nomeSala">Nome da Sala:</label>
+    <input type="text" id="nomeSala" required>
+--> 
+    <label for="cadeiras">Número de Cadeiras:</label>
+    <input type="number" id="cadeiras" required>
+
+    <label for="computadores">Número de Computadores:</label>
+    <input type="number" id="computadores" required>
+
+    <label for="quadroBranco">Quadro Branco:</label>
+    <input type="text" id="quadroBranco">
+
+    <label for="projetor">Projetor:</label>
+    <input type="text" id="projetor">
+
+    <label for="telaProjetor">Tela de Projetor:</label>
+    <input type="text" id="telaProjetor">
+
+    <label for="tv">TV:</label>
+    <input type="text" id="tv">
+
+    <label for="area">Área:</label>
+    <input type="text" id="area">    
+
+    <label for="maquinario">Recursos didáticos:</label>
+    <input type="text" id="maquinario">
+
+    <label for="salaImage">Imagem da Sala:</label>
+  <input type="file" id="salaImage" accept="image/*"/>
+
+<br><br>
+    <button type="submit">Salvar Alterações</button>
+  </form>
+</main>
+  <footer>
+    <p>Desenvolvido pela equipe Lean Senai Gravataí </p>
+    <div id="informacaoSala" class="informacao-sala">
+      <img src="/imagens/Logotipo - FIERGS - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+      <img src="/imagens/Logotipo - IEL - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+      <img src="/imagens/Logotipo - SENAI - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+      <img src="/imagens/Logotipo - SESI - Completo - Branco.png" alt="Clique no menu" class="imagem-informativa">
+  </div>
+  </footer>
+  <script src="../js/alteradados.js"></script>
+</body>
+
+</html>

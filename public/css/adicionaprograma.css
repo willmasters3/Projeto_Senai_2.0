@@ -1,0 +1,214 @@
+/* Estilos gerais */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  
+  background-size: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+body.sala-info-visible::before {
+  opacity: 0.2;
+}
+body {
+  background-image: url("/imagens/Fundo-para-reuniões-Teams---azul---corrigido.png");
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;  
+}
+
+header {
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+/* Estilos para o link "Adicionar Programas" */
+header a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #f1eded; /* Cor do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-right: 20px; /* Adiciona um espaçamento à direita */
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items:flex-start;
+  padding: 5px;
+}
+/* Estilos para a div contendo os links */
+.hiperlink-programas {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: space-around; /*nao esquecer de verificar no celular*/
+}
+
+/* Estilos para cada link dentro da div */
+.hiperlink-programas a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #f7f4f4; /* Cor do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-right: 20px; /* Adiciona um espaçamento à direita */
+}
+/* Container para as seções lado a lado */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Estilos para as seções */
+section {
+  flex: 1;
+  background-color: rgba(249, 249, 249, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Estilos para os formulários */
+form {
+  margin: 0 auto;
+}
+fieldset {
+  border: none;
+  padding: 0;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button[type="submit"] {
+  background-color: #0948f7;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.programas-container label,
+.programas-container input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle; /* Isso alinha verticalmente os elementos */
+  margin-bottom: 5px; /* Espaçamento entre os elementos */
+}
+
+/* Estilos para os contêineres dos programas */
+.programas-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+  max-width: 700px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+/* Estilos para os itens individuais dentro dos contêineres */
+
+.programas-container > div {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f8f2f2;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.programas-container button {
+  background-color: #fa7453;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.programas-container button:hover {
+  background-color: #eee1e4;
+}
+
+/* Estilos para divs de programas */
+
+#programasAdicionados,
+#programasAssociados {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+  max-width: 700px;
+  overflow-y: auto;
+  max-height: 200px;
+ 
+}
+
+#programasAdicionados > div,
+#programasAssociados > div {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f8f2f2;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#programasAdicionados button,
+#programasAssociados button {
+  background-color: #fa7453;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#programasAdicionados button:hover,
+#programasAssociados button:hover {
+  background-color: #eee1e4;
+}
+.informacao-sala {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.imagem-informativa {
+  max-width: 20%;
+  height: 50.02px;
+}
+footer {
+  border-radius: 5px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;  
+  padding: 10px;
+  text-align: center;
+  
+}
